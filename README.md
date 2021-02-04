@@ -1,5 +1,5 @@
 # Slack/Twilio Integration Application
-This is a PHP application to integrate incoming message from Twilio with a Slack environment. This allows multiple 
+This is a PHP application to integrate incoming messages from Twilio with a Slack environment. This allows multiple 
 people from within an organization to receive and respond to text messages.
 
 ## Documentation
