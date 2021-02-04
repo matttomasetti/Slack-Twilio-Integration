@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\API\Slack\Channel" namespace="src\Controller\API\Slack" name="Channel" abstract="false" final="false" start="10" end="127">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack" file="Channel.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack/Channel.php" size="4632" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="90101d0aaea98dd66473e3547ba8815eae246998" relative="src/Controller/API/Slack/Channel.php"/>
+  <docblock>
+    <description compact="Controller providing CRUD functionality for Channels through Slacks API"/>
+    <package value="src\Controller\API\Slack"/>
+  </docblock>
+  <method name="getAll" start="16" end="20" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get all channels in the workspace"/>
+      <return description="Slack's API response containing data on Slack channels" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <method name="get" start="27" end="32" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get a specific channel with the given ID in the workspace"/>
+      <param description="the ID of the channel to retrieve" type="string" variable="$channel_id"/>
+      <return description="Slack's API response containing data on the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+  </method>
+  <method name="getByName" start="40" end="58" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get a specific channel with a given name in the workspace"/>
+      <param description="the name of the channel to retrieve" type="string" variable="$channel_name"/>
+      <return description="Slack's API response containing data on the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_name" byreference="false" type="string"/>
+    <inline>
+      <comment value="Slack's API doesn't have an API call to retrieve a channel by name" line="42"/>
+      <comment value="So grab all the channel and loop through until a match is found" line="43"/>
+      <comment value="between the Channel Name and the parameter is found" line="44"/>
+      <comment value="If a match is not found, or the API returns an error" line="55"/>
+      <comment value="return an empty array" line="56"/>
+    </inline>
+  </method>
+  <method name="create" start="65" end="70" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Create a channel in the workspace with the given name"/>
+      <param description="the name of the channel to create" type="string" variable="$channel_name"/>
+      <return description="Slack's API response containing data on the created Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_name" byreference="false" type="string"/>
+  </method>
+  <method name="getHistory" start="78" end="83" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the message history of a specific channel with the given ID in the workspace"/>
+      <param description="the ID of the channel who's history is to be retrieved" type="string" variable="$channel_id"/>
+      <return description="Slack's API response containing the message history data of the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+  </method>
+  <method name="getMembers" start="90" end="95" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the members of a specific channel with the given ID in the workspace"/>
+      <param description="the ID of the channel who's members is to be retrieved" type="string" variable="$channel_id"/>
+      <return description="Slack's API response containing the members of the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+  </method>
+  <method name="inviteMember" start="103" end="108" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Adds a list of users by their user ID to a given channel"/>
+      <param description="the ID of the channel to add the users to" type="string" variable="$channel_id"/>
+      <param description="a comma separated list of Slack user IDs" type="string" variable="$user_ids"/>
+      <return description="Slack's API response containing data on the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+    <parameter name="user_ids" byreference="false" type="string"/>
+  </method>
+  <method name="kickMember" start="116" end="121" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Remove a single users by their user ID from a given channel"/>
+      <param description="the ID of the channel to remove the user from" type="string" variable="$channel_id"/>
+      <param description="the ID of the user to be removed" type="string" variable="$user_id"/>
+      <return description="Slack's API response containing data on the Slack channel" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+    <parameter name="user_id" byreference="false" type="string"/>
+  </method>
+</class>

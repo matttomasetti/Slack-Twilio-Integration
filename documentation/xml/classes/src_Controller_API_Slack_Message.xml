@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\API\Slack\Message" namespace="src\Controller\API\Slack" name="Message" abstract="false" final="false" start="10" end="53">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack" file="Message.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack/Message.php" size="1987" time="2021-02-04T22:43:24+01:00" unixtime="1612475004" sha1="5709e52c0396332c1299140fd8c4c78574e6e370" relative="src/Controller/API/Slack/Message.php"/>
+  <docblock>
+    <description compact="Controller providing CRUD functionality for Messages through Slacks API."/>
+    <package value="src\Controller\API\Slack"/>
+  </docblock>
+  <method name="create" start="22" end="51" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Send a new message in a slack channel.">This function will also create the channel is it does not already exist,
+as well as add all members of the Slack user group to the channel</description>
+      <param description="The name of the channel to send the message in" type="string" variable="$channel_name"/>
+      <param description="The body text of the message" type="string" variable="$text"/>
+      <param description="JSON array of images to be sent with the message" type="string" variable="$attachments"/>
+      <param description="Whether to retry to send the message if sending fails" type="object" variable="$retry">
+        <type full="src\Controller\API\Slack\bool" namespace="src\Controller\API\Slack" name="bool"/>
+      </param>
+      <return description="Slack's API response containing data on the Slack message" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_name" byreference="false" type="string"/>
+    <parameter name="text" byreference="false" type="string"/>
+    <parameter name="attachments" byreference="false" type="string" default="&quot;&quot;"/>
+    <parameter name="retry" byreference="false" type="boolean" default="false"/>
+    <inline>
+      <comment value="Ensure all members of the Slack user group are in the channel" line="25"/>
+      <comment value="Send the message into the Slack Channel" line="34"/>
+      <comment value="If the message fails to send due to the channel not being found" line="43"/>
+      <comment value="create the channel, and retry" line="44"/>
+    </inline>
+  </method>
+</class>

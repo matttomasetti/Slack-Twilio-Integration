@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\TwilioController" namespace="src\Controller" name="TwilioController" abstract="false" final="false" start="14" end="61">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller" file="TwilioController.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/TwilioController.php" size="2143" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="51865a504a6c4f6f8df5dc07f41025c1e2217347" relative="src/Controller/TwilioController.php"/>
+  <docblock>
+    <description compact="Controller to add functionality for interacting with Twilio messages"/>
+    <package value="src\Controller"/>
+  </docblock>
+  <method name="getMediaFromMessage" start="22" end="59" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Grabs all media from an incoming Twilio message"/>
+      <param description="The name of the channel which the media will be shared too" type="string" variable="$channel_name"/>
+      <return description="An array of all images attached to the incoming text message ( videos are shared via Slack's" type="array">File API calls )</return>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_name" byreference="false" type="string"/>
+    <inline>
+      <comment value="Let data on the Slack channel which the attachments will be shared to." line="25"/>
+      <comment value="This is needed if any video files are to be shared, since they will be" line="26"/>
+      <comment value="sent immediately through an API call, instead of passed back to be sent" line="27"/>
+      <comment value="as attachments to the Slack message" line="28"/>
+      <comment value="loop through each media file in the incoming message" line="31"/>
+    </inline>
+  </method>
+</class>

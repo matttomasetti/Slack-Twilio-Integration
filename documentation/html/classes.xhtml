@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Overview</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <h1>Classes</h1>
+      <div class="container">
+        <h2 id="console">\console</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th/>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="classes/console_Command.xhtml">Command</a>
+              </td>
+              <td>Class for handling terminal commands.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h2 id="core">\core</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th/>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="classes/core_EnvironmentHandler.xhtml">EnvironmentHandler</a>
+              </td>
+              <td>Middleware to load all variables in the env.ini file in PHP's $_ENV variable</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/core_Kernel.xhtml">Kernel</a>
+              </td>
+              <td>Core of the application. Loads in core files, necessary controllers, loads middleware, and passes the request of to the Route handler</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/core_RouteHandler.xhtml">RouteHandler</a>
+              </td>
+              <td>Handles the routing of requests to their corresponding controller and function</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/core_ViewHandler.xhtml">ViewHandler</a>
+              </td>
+              <td>Class designated to serving HTML files</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h2 id="src_Controller">\src\Controller</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th/>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_DefaultController.xhtml">DefaultController</a>
+              </td>
+              <td>Handles incoming requests to the application</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_SlackController.xhtml">SlackController</a>
+              </td>
+              <td>Controller to add functionality for interacting with Slack</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_TwilioController.xhtml">TwilioController</a>
+              </td>
+              <td>Controller to add functionality for interacting with Twilio messages</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h2 id="src_Controller_API_Slack">\src\Controller\API\Slack</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th/>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Slack_Channel.xhtml">Channel</a>
+              </td>
+              <td>Controller providing CRUD functionality for Channels through Slacks API</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Slack_File.xhtml">File</a>
+              </td>
+              <td>Controller providing CRUD functionality for Files through Slacks API.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Slack_Message.xhtml">Message</a>
+              </td>
+              <td>Controller providing CRUD functionality for Messages through Slacks API.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Slack_SlackCall.xhtml">SlackCall</a>
+              </td>
+              <td>Class for sending API calls to Slack, as well as format any necessary data.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Slack_UserGroup.xhtml">UserGroup</a>
+              </td>
+              <td>Controller providing CRUD functionality for User Groups through Slacks API.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h2 id="src_Controller_API_Twilio">\src\Controller\API\Twilio</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th/>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="classes/src_Controller_API_Twilio_TextMessage.xhtml">TextMessage</a>
+              </td>
+              <td>Controller providing text message functionality through Twilio's API.</td>
+              <td class="testresult-EMPTY">EMPTY
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

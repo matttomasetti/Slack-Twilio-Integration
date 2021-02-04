@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\DefaultController" namespace="src\Controller" name="DefaultController" abstract="false" final="false" start="14" end="95">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller" file="DefaultController.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/DefaultController.php" size="3573" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="64f92747ab3640783ebe08543163a39991b66408" relative="src/Controller/DefaultController.php"/>
+  <docblock>
+    <description compact="Handles incoming requests to the application"/>
+    <package value="src\Controller"/>
+  </docblock>
+  <method name="incomingMessageRoute" start="19" end="39" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Handles incoming text messages being sent to the Twilio number"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <inline>
+      <comment value="file_put_contents(&quot;var/log/incoming.txt&quot;, &quot;\n&quot;.json_encode($_POST), FILE_APPEND);" line="20"/>
+      <comment value="retrieve the message body and the customer phone number from the incoming text message" line="22"/>
+      <comment value="grab all attachments from the incoming text message" line="27"/>
+    </inline>
+  </method>
+  <method name="outgoingMessageRoute" start="44" end="94" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Handles messages from Slack meant to be outgoing to customers"/>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <inline>
+      <comment value="retrieve the message being passed in from Slack" line="46"/>
+      <comment value="file_put_contents(&quot;var/log/outgoing.txt&quot;, &quot;\n&quot;.$body, FILE_APPEND);" line="50"/>
+      <comment value="Messages sent from a Slack user are the only event without a subtype." line="52"/>
+      <comment value="Without this, the customer will receive text message of all channel activities" line="53"/>
+      <comment value="including their own messages and users joining and leaving the channel" line="54"/>
+      <comment value="get the text of the Slack message, which will be the body of the outgoing text message" line="59"/>
+      <comment value="get the channel information that the Slack message was sent through" line="62"/>
+      <comment value="determine the customer's phone number from the Slack channel's name" line="70"/>
+      <comment value="grab all media that was sent in the Slack message" line="73"/>
+      <comment value="send the needed data to the TextMessage controller to be sent through Twilio as a text message" line="80"/>
+      <comment value="any media in the Slack channels was made public during the &quot;getMediaFromMessage&quot; function call, so that" line="87"/>
+      <comment value="Twilio could retrieve the media files." line="88"/>
+      <comment value="Those files should now be remade private." line="89"/>
+    </inline>
+  </method>
+</class>

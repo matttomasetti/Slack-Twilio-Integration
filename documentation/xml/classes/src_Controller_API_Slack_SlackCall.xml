@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\API\Slack\SlackCall" namespace="src\Controller\API\Slack" name="SlackCall" abstract="false" final="false" start="10" end="75">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack" file="SlackCall.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack/SlackCall.php" size="2547" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="aa77bd83817e5a5d17a7d00b7e5f9e3442868195" relative="src/Controller/API/Slack/SlackCall.php"/>
+  <docblock>
+    <description compact="Class for sending API calls to Slack, as well as format any necessary data."/>
+    <package value="src\Controller\API\Slack"/>
+  </docblock>
+  <method name="formatData" start="18" end="29" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Formats a given associative array into a valid POSTFIELDS string"/>
+      <param description="Associative array which it to be formatted" type="array" variable="$data_array"/>
+      <return description="Formatted POSTFIELDS string" type="string"/>
+    </docblock>
+    <return type="string" nullable="false"/>
+    <parameter name="data_array" byreference="false" type="array"/>
+    <inline>
+      <comment value="conjoin the key and values of the associative array into" line="21"/>
+      <comment value="a valid POSTFIELDS string" line="22"/>
+      <comment value="return the conjoined string (minus the trailing &quot;&amp;&quot;)" line="27"/>
+    </inline>
+  </method>
+  <method name="send" start="40" end="73" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sends a CURL request to the Slack API using the given parameters and returns the decoded JSON response"/>
+      <param description="The URI of the desired API call" type="string" variable="$uri"/>
+      <param description="The data, if any, which it to be sent in the API call" type="object" variable="$data">
+        <type full="src\Controller\API\Slack\string|null" namespace="src\Controller\API\Slack" name="string|null"/>
+      </param>
+      <param description="The HTTP method which is to be used for the API call" type="string" variable="$method"/>
+      <param description="Whether or not to use the bot oauth token ofr the API call" type="object" variable="$bot_token">
+        <type full="src\Controller\API\Slack\bool" namespace="src\Controller\API\Slack" name="bool"/>
+      </param>
+      <return description="Slack's response to the API request" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="uri" byreference="false" type="string"/>
+    <parameter name="data" byreference="false" type="string" default="NULL"/>
+    <parameter name="method" byreference="false" type="string" default="&quot;POST&quot;"/>
+    <parameter name="bot_token" byreference="false" type="boolean" default="false"/>
+    <inline>
+      <comment value="Determine whether to use the bot token or the default app token for authentication" line="44"/>
+      <comment value="file_put_contents(&quot;var/log/api.txt&quot;, $response.&quot;\n&quot;, FILE_APPEND);" line="68"/>
+    </inline>
+  </method>
+</class>

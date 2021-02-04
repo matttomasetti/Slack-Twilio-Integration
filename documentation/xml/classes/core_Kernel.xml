@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="core\Kernel" namespace="core" name="Kernel" abstract="false" final="false" start="11" end="83">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/core" file="Kernel.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/core/Kernel.php" size="2099" time="2021-02-04T22:34:45+01:00" unixtime="1612474485" sha1="331cda3114714d62ba0a72d57f5e872599235435" relative="core/Kernel.php"/>
+  <docblock>
+    <description compact="Core of the application. Loads in core files, necessary controllers, loads middleware, and passes the request of to the Route handler"/>
+    <package value="core"/>
+  </docblock>
+  <constructor name="__construct" start="16" end="18" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Kernel constructor."/>
+    </docblock>
+  </constructor>
+  <method name="load" start="25" end="33" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Loads all required files for this application and passes the request to the Route Handler"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="loadCore" start="40" end="46" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Loads composer packages as well as core files to the application"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="loadControllers" start="52" end="64" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Lods controllers for handling request"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="loadMiddleware" start="71" end="73" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Calls on necessary middleware needed to run before handling the request"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+  <method name="routeRequest" start="79" end="81" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Calls the Route Handler to process the request"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

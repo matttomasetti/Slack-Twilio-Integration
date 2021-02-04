@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="core\ViewHandler" namespace="core" name="ViewHandler" abstract="false" final="false" start="9" end="35">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/core" file="ViewHandler.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/core/ViewHandler.php" size="789" time="2021-02-04T22:34:45+01:00" unixtime="1612474485" sha1="6cf0d92f721f7c2e4415fbf827028bc938d5c033" relative="core/ViewHandler.php"/>
+  <docblock>
+    <description compact="Class designated to serving HTML files"/>
+    <package value="core"/>
+  </docblock>
+  <method name="render" start="17" end="23" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Grabs the contents of a given template file and echos it out."/>
+      <param description="the path of the file to be rendered" type="string" variable="$template_path"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="template_path" byreference="false" type="string"/>
+  </method>
+  <method name="notFound" start="29" end="32" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Call for the render function to server the 404 error HTML file"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

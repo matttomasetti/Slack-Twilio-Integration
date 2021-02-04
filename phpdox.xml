@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<phpdox xmlns="http://xml.phpdox.net/config">
+    <project name="Slack - Twilio Integration" source="${basedir}" workdir="${basedir}/documentation/xml">
+        <collector backend="parser">
+            <exclude mask="**vendor**" />
+        </collector>
+        <generator output="${basedir}/documentation">
+
+            <enrich base="${basedir}/src">
+
+                <source type="phploc">
+                    <file name="../phploc.xml" />
+                </source>
+            </enrich>
+            <build engine="html" output="html"/>
+
+        </generator>
+    </project>
+</phpdox>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\API\Slack\File" namespace="src\Controller\API\Slack" name="File" abstract="false" final="false" start="12" end="95">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack" file="File.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack/File.php" size="3261" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="0c18ec41ba6a99a96ff650644edc131a1040f33f" relative="src/Controller/API/Slack/File.php"/>
+  <docblock>
+    <description compact="Controller providing CRUD functionality for Files through Slacks API.">This is used for video files, since only images can be directly attached to a slack message.</description>
+    <package value="src\Controller\API\Slack"/>
+  </docblock>
+  <method name="create" start="22" end="44" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Creates a new Slack File from a file based on an external, publicly accessible URL"/>
+      <param description="an unique id to which the file can be referenced by later. This can be" type="string" variable="$file_id">any unique value.</param>
+      <param description="the url of the file that Slack is to import" type="string" variable="$url"/>
+      <param description="the title of the file, which will display when the file is shared" type="string" variable="$title"/>
+      <return description="Slack's API response containing data on the Slack file" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="file_id" byreference="false" type="string"/>
+    <parameter name="url" byreference="false" type="string"/>
+    <parameter name="title" byreference="false" type="string" default="&quot;&quot;"/>
+    <inline>
+      <comment value="If not title is given, assign the new file a default title" line="24"/>
+      <comment value="Remove any unusual characters from the title that could cause the API to reject it" line="29"/>
+    </inline>
+  </method>
+  <method name="share" start="52" end="61" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Sends the given Slack File in the given Slack Channel"/>
+      <param description="the id of the channel which the file it to be shared in" type="string" variable="$channel_id"/>
+      <param description="the id of the file to be shared" type="string" variable="$file_id"/>
+      <return description="Slack's API response containing data on the Slack file" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="channel_id" byreference="false" type="string"/>
+    <parameter name="file_id" byreference="false" type="string"/>
+  </method>
+  <method name="makePublic" start="70" end="78" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Makes a file publicly accessible.">By default, files are private. However, they need to be made public in order to share with people/services
+outside of Slack</description>
+      <param description="the ID of the file to be public" type="string" variable="$file_id"/>
+      <return description="Slack's API response containing data on the Slack file" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="file_id" byreference="false" type="string"/>
+  </method>
+  <method name="makePrivate" start="85" end="93" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Makes a file private."/>
+      <param description="the ID of the file to be private" type="string" variable="$file_id"/>
+      <return description="Slack's API response containing data on the Slack file" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="file_id" byreference="false" type="string"/>
+  </method>
+</class>

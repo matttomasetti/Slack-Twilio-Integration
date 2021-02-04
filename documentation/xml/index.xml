@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/Users/matt/PHPStorm/slack-twilio-integration">
+  <namespace name="core">
+    <class name="ViewHandler" src="core/ViewHandler.php" description="Class designated to serving HTML files" xml="classes/core_ViewHandler.xml"/>
+    <class name="EnvironmentHandler" src="core/EnvironmentHandler.php" description="Middleware to load all variables in the env.ini file in PHP's $_ENV variable" xml="classes/core_EnvironmentHandler.xml"/>
+    <class name="RouteHandler" src="core/RouteHandler.php" description="Handles the routing of requests to their corresponding controller and function" xml="classes/core_RouteHandler.xml"/>
+    <class name="Kernel" src="core/Kernel.php" description="Core of the application. Loads in core files, necessary controllers, loads middleware, and passes the request of to the Route handler" xml="classes/core_Kernel.xml"/>
+  </namespace>
+  <namespace name="console">
+    <class name="Command" src="console/command.php" description="Class for handling terminal commands." xml="classes/console_Command.xml"/>
+  </namespace>
+  <namespace name="src\Controller">
+    <class name="DefaultController" src="src/Controller/DefaultController.php" description="Handles incoming requests to the application" xml="classes/src_Controller_DefaultController.xml"/>
+    
+    <class name="TwilioController" src="src/Controller/TwilioController.php" description="Controller to add functionality for interacting with Twilio messages" xml="classes/src_Controller_TwilioController.xml"/>
+  <class name="SlackController" src="src/Controller/SlackController.php" description="Controller to add functionality for interacting with Slack" xml="classes/src_Controller_SlackController.xml"/></namespace>
+  <namespace name="src\Controller\API\Slack">
+    <class name="File" src="src/Controller/API/Slack/File.php" description="Controller providing CRUD functionality for Files through Slacks API." xml="classes/src_Controller_API_Slack_File.xml"/>
+    <class name="SlackCall" src="src/Controller/API/Slack/SlackCall.php" description="Class for sending API calls to Slack, as well as format any necessary data." xml="classes/src_Controller_API_Slack_SlackCall.xml"/>
+    <class name="Channel" src="src/Controller/API/Slack/Channel.php" description="Controller providing CRUD functionality for Channels through Slacks API" xml="classes/src_Controller_API_Slack_Channel.xml"/>
+    
+    <class name="UserGroup" src="src/Controller/API/Slack/UserGroup.php" description="Controller providing CRUD functionality for User Groups through Slacks API." xml="classes/src_Controller_API_Slack_UserGroup.xml"/>
+  <class name="Message" src="src/Controller/API/Slack/Message.php" description="Controller providing CRUD functionality for Messages through Slacks API." xml="classes/src_Controller_API_Slack_Message.xml"/></namespace>
+  <namespace name="src\Controller\API\Twilio">
+    <class name="TextMessage" src="src/Controller/API/Twilio/TextMessage.php" description="Controller providing text message functionality through Twilio's API." xml="classes/src_Controller_API_Twilio_TextMessage.xml"/>
+  </namespace>
+</index>

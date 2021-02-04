@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="console\Command" namespace="console" name="Command" abstract="false" final="false" start="20" end="79">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/console" file="command.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/console/command.php" size="1936" time="2021-02-04T22:34:45+01:00" unixtime="1612474485" sha1="7f2cb5ef5654af360fcc71e413d4ab27ab99cf98" relative="console/command.php"/>
+  <docblock>
+    <description compact="Class for handling terminal commands.">While the goal of this application is to be commandless,
+this is used by a CRON job
+
+Usage: php console/command {command}.</description>
+  </docblock>
+  <constructor name="__construct" start="29" end="43" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Retrieves the desired command entered in the command line.">If no command is present, it will prompt the user for one.</description>
+      <param description="The arguments entered in the commandline at runtime" type="array" variable="$argv"/>
+      <return type="object">
+        <type full="console\void" namespace="console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="argv" byreference="false" type="array"/>
+    <inline>
+      <comment value="Get command" line="31"/>
+      <comment value="Run command" line="40"/>
+    </inline>
+  </constructor>
+  <method name="runCommand" start="50" end="61" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Routes a given command string to it's corresponding function."/>
+      <param description="the name of the command to run" type="string" variable="$command_name"/>
+      <return type="object">
+        <type full="console\void" namespace="console" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="command_name" byreference="false" type="string"/>
+  </method>
+  <method name="clear" start="69" end="77" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Calls on the SlackController to remove users from Slack Channels that have been inactive for over 24 hours."/>
+      <return type="object">
+        <type full="console\void" namespace="console" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

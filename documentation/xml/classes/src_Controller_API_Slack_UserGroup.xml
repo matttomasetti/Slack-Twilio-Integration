@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="src\Controller\API\Slack\UserGroup" namespace="src\Controller\API\Slack" name="UserGroup" abstract="false" final="false" start="12" end="25">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack" file="UserGroup.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/src/Controller/API/Slack/UserGroup.php" size="713" time="2021-02-04T22:34:46+01:00" unixtime="1612474486" sha1="a3b3881e1f5b23ac645c7ea022dac7311a8ba16d" relative="src/Controller/API/Slack/UserGroup.php"/>
+  <docblock>
+    <description compact="Controller providing CRUD functionality for User Groups through Slacks API."/>
+    <package value="src\Controller\API\Slack"/>
+  </docblock>
+  <method name="getMembers" start="19" end="24" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Gets all members that belong to a given User Group"/>
+      <param description="The ID of the User Group who's members should be retrieved" type="string" variable="$usergroup_id"/>
+      <return description="Slack's API response containing member data on the Slack user group" type="array"/>
+    </docblock>
+    <return type="array" nullable="false"/>
+    <parameter name="usergroup_id" byreference="false" type="string"/>
+  </method>
+</class>

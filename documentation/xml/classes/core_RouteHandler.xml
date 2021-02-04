@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="core\RouteHandler" namespace="core" name="RouteHandler" abstract="false" final="false" start="14" end="67">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/core" file="RouteHandler.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/core/RouteHandler.php" size="1797" time="2021-02-04T22:34:45+01:00" unixtime="1612474485" sha1="1a86e8aa5df0ff16a0594084f244592ff3bf4773" relative="core/RouteHandler.php"/>
+  <docblock>
+    <description compact="Handles the routing of requests to their corresponding controller and function"/>
+    <package value="core"/>
+  </docblock>
+  <member name="controller" visibility="private" static="false" line="21">
+    <docblock>
+      <description compact="Object holding on controllers that handle routes"/>
+      <var type="object">
+        <type full="stdClass" namespace="" name="stdClass"/>
+      </var>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="29" end="35" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="RouteHandler constructor.">Initializes the controller member property
+and calls the route function on the requested URI</description>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+  </constructor>
+  <method name="route" start="43" end="66" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Routes the given request to it's corresponding controller.">Throws a 404 Not Found error is no route found or on error.</description>
+      <param description="the URI of the current request to the server" type="string" variable="$request"/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+    <parameter name="request" byreference="false" type="string"/>
+  </method>
+</class>

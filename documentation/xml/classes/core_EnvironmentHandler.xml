@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="core\EnvironmentHandler" namespace="core" name="EnvironmentHandler" abstract="false" final="false" start="12" end="35">
+  <file path="/Users/matt/PHPStorm/slack-twilio-integration/core" file="EnvironmentHandler.php" realpath="/Users/matt/PHPStorm/slack-twilio-integration/core/EnvironmentHandler.php" size="704" time="2021-02-04T22:34:45+01:00" unixtime="1612474485" sha1="1c8d13db4025c6ef06f36e99c328f7940fb3d916" relative="core/EnvironmentHandler.php"/>
+  <docblock>
+    <description compact="Middleware to load all variables in the env.ini file in PHP's $_ENV variable"/>
+    <package value="core"/>
+  </docblock>
+  <constructor name="__construct" start="17" end="20" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="EnvironmentHandler constructor."/>
+    </docblock>
+  </constructor>
+  <method name="defineEnvironmentalVariables" start="27" end="33" abstract="false" final="false" static="false" visibility="private">
+    <docblock>
+      <description compact="Grabs the contents of the env.ini config file and stores each entry in the $_ENV array."/>
+      <return type="object">
+        <type full="core\void" namespace="core" name="void"/>
+      </return>
+    </docblock>
+    <return type="void" nullable="false"/>
+  </method>
+</class>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - src\Controller\API\Slack\SlackCall::send</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#src_Controller_API_Slack">src\Controller\API\Slack</a>
+          </li>
+          <li class="separator">
+            <a title="src\Controller\API\Slack\SlackCall" href="../../classes/src_Controller_API_Slack_SlackCall.xhtml">SlackCall</a>
+          </li>
+          <li class="separator">send</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/src/Controller/API/Slack/SlackCall.php.xhtml#line40">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>src\Controller\API\Slack\SlackCall::</small>send</h1>
+        <h4>Sends a CURL request to the Slack API using the given parameters and returns the decoded JSON response</h4>
+        <p/>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function send(string
+        $uri,
+            [string
+        $data = NULL,
+            [string
+        $method = "POST",
+            [boolean
+        $bot_token = false]]] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$uri</code>
+                —
+                string</dt>
+          <dd>The URI of the desired API call</dd>
+          <dt><code>$data</code>
+                —
+                string</dt>
+          <dd>The data, if any, which it to be sent in the API call<br/><br/><br/>      </dd>
+          <dt><code>$method</code>
+                —
+                string</dt>
+          <dd>The HTTP method which is to be used for the API call</dd>
+          <dt><code>$bot_token</code>
+                —
+                boolean</dt>
+          <dd>Whether or not to use the bot oauth token ofr the API call<br/><br/><br/>      </dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>array</dt>
+          <dd>Slack's response to the API request</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0 - Copyright (C) 2010 - 2021 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
